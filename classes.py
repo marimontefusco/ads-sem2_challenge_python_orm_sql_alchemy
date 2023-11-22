@@ -43,10 +43,11 @@ session = Session(engine)
 class Base(DeclarativeBase):
   pass
 
+# ---------------------------------------------------
 
 ## ## Definição das Classes e MAPEAMENTO das Tabelas ## ##
 
-# classe Paciente
+# Classe Paciente
 class Paciente(Base):
   __tablename__ = 'PACIENTE'
   id = Column('ID', Integer, autoincrement = True, primary_key=True)
@@ -59,7 +60,8 @@ class Paciente(Base):
     self.cpf = cpf
     self.idade = idade
 
-# classe Medico
+
+# Classe Medico
 class Medico(Base):
   __tablename__ = 'MEDICO'
   id = Column('ID', Integer, autoincrement = True, primary_key=True)
@@ -72,7 +74,8 @@ class Medico(Base):
     self.crm = crm
     self.especializacao = especializacao
 
-# classe Exame
+
+# Classe Exame
 class Exame(Base):
   __tablename__ = 'EXAME'
   id = Column('ID', Integer, autoincrement = True, primary_key=True)

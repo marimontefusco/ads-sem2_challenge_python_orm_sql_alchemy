@@ -1,7 +1,8 @@
 # AC05 -> INTEGRAÇÃO COM BANCO DE DADOS
-from classes import *
-from funcoes import *
+from funcoesExibicao import *;
 from funcoesExibicao import *
+from funcoes import *
+from classes import *
 
 ## CLASSE MAIN
 try:
@@ -9,7 +10,8 @@ try:
   while True:
 
     exibirMenu()
-    opcao = int(input('Digite a opção desejada: '))
+    opcao = int(input('''    Digite a opção desejada: '''))
+    print('\n')
 
     match opcao:
       case 1:
@@ -21,15 +23,41 @@ try:
         cadastrarPaciente()
 
       case 3: 
-        exibirHeaderExame()
-        cadastrarExame()
+        exibirMsgExame()
+        op = int(input('''    Digite a opção desejada: '''
+        ))
+        
+        if op == 1:
+          exibirHeaderConsultarMedico()
+          consultarMedicos()       
+        elif op == 2:
+          exibirHeaderConsultarPaciente()
+          consultarPacientes()
+        elif op == 3:
+          exibirHeaderExame()
+          cadastrarExame()
+        elif op == 4:
+          exibirMsgFinal()
+          break
+
+        else:
+          print('Opção inválida, tente novamente')
+          break
 
       case 4:
-        exibirHeaderConsultar()
-        #consultar()
+        exibirHeaderConsultarMedico()
+        consultarMedicos()
       
       case 5:
-        exibirFinal()
+        exibirHeaderConsultarPaciente()
+        consultarPacientes()
+
+      case 6:
+        exibirHeaderConsultarExame()
+        consultarExames()
+
+      case 7:
+        exibirMsgFinal()
         break
 
       case _:

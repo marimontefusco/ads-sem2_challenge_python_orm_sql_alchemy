@@ -2,19 +2,24 @@
 
 def exibirMenu():
   print('''
-  --------------------------------
-        Sistema de Cadastros
-  --------------------------------
         
+  ================================ 
+             
+        Sistema de Cadastros
+
+  --------------------------------
+     
     1. Cadastrar Médico
     2. Cadastrar Paciente
     3. Cadastrar Exame
         
-    4. Consultar Exames do Paciente
+    4. Consultar Médicos
+    5. Consultar Pacientes
+    6. Consultar Exames do Paciente
   
-    5. Sair
+    7. Sair
         
-  --------------------------------      
+  ================================      
   ''')
 
 
@@ -41,18 +46,68 @@ def exibirHeaderExame():
   --------------------------------
   ''')
 
+def exibirMsgExame():
+  print('''
+  ================================
+        
+    Atenção!
+        
+  ================================
+        
+    Para cadastrar o Exame, 
+    são necessários:
+        
+    - Id do médico 
+    - Id do paciente
+          
+  ================================
+        
+    O que você deseja fazer?
+        
+  ================================
+        
+    1. Consultar Cadastro Médico
+        
+    2. Consultar Cadastro Paciente
+        
+    3. Cadastrar Exame
+        
+    4. Sair    
+    
+  ================================
+  ''')
 
-def exibirHeaderConsultar():
+
+def exibirHeaderConsultarMedico():
   print('''
   --------------------------------
-          Consultar Exame
+          Consultar Médicos
   --------------------------------
   ''')
 
 
-def exibirFinal():
+def exibirHeaderConsultarPaciente():
   print('''
   --------------------------------
-              Até Logo!!!
+         Consultar Pacientes
   --------------------------------
+  ''')
+
+
+
+def exibirHeaderConsultarExame():
+  print('''
+  --------------------------------
+          Consultar Exames
+  --------------------------------
+  ''')
+
+
+def exibirMsgFinal():
+  print('''
+  ================================
+  
+              Até Logo!!!
+        
+  ================================
   ''')
